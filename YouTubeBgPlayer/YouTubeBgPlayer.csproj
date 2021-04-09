@@ -6,4 +6,9 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MetroFramework" Version="1.2.0.3" />
+    <PackageReference Include="NAudio" Version="2.0.0" />
+  </ItemGroup>
+
 </Project>
