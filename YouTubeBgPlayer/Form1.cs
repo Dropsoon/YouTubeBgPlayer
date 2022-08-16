@@ -27,6 +27,7 @@ namespace YouTubeBgPlayer
         int addedSongs = 0;
         int currentSong = 0;
         bool bStopClicekd = false;
+        bool bTextClicked = false;
         bool nextorprev = false;
         float volume = 0.1f;
         public Form1()
@@ -70,6 +71,7 @@ namespace YouTubeBgPlayer
                 fs.Close();
             } else
             {
+                
                 File.Create("songs/ids.txt");
             }
             for(int i=0; i<addedSongs; i++)
@@ -175,6 +177,25 @@ namespace YouTubeBgPlayer
                 outputDevice.Play();
                 bStopClicekd = false;
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tLink_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!bTextClicked)
+            {
+                this.tLink.Text = "";
+                bTextClicked = true;
+            }
+        }
+
+        private void tLink_MouseDoubleClick(object sender, MouseEventArgs e) //show dialog with waild links
+        {
+
         }
     }
 }
